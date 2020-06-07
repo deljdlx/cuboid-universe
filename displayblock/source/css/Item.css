@@ -1,0 +1,9 @@
+.item-wrapper {
+    position: absolute;
+    transform-style: preserve-3d;
+
+
+    /*
+    transition: all 0.5s linear;
+    */
+}

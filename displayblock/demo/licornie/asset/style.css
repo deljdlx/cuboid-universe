@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Handwriting";
+    src: url("./font/Niconne/Niconne-Regular.ttf");
+  }
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding:0;
+    background-image: url(./rainbow.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+h1 {
+    font-family: Handwriting;
+    font-size: 64px;
+    padding-left: 32px;
+    color: #EC1585;
+}

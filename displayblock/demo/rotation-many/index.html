@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+
+
+    
+<link rel="stylesheet" href="../../source/css/style.css" />
+<link rel="stylesheet" href="../../source/css/Board.css" />
+
+
+<link rel="stylesheet" href="../../source/css/Item.css" />
+
+
+<link rel="stylesheet" href="../../source/css/Cuboid.css" />
+<link rel="stylesheet" href="../../source/css/Cube.css" />
+
+
+
+
+
+
+
+<link rel="stylesheet" href="asset/style.css" />
+
+<title>Rotation</title>
+
+</head>
+
+<body>
+
+<h1>Rotation</h1>
+
+
+<script src="../../source/js/Viewport.js"></script>
+<script src="../../source/js/Board.js"></script>
+<script src="../../source/js/Board/Free.js"></script>
+<script src="../../source/js/Item.js"></script>
+<script src="../../source/js/Cuboid.js"></script>
+<script src="../../source/js/Cube.js"></script>
+
+<script>
+
+let viewport = new Viewport(document.body);
+
+
+
+/*
+let axisLength = 10000;
+
+let xAxis = new Cuboid(axisLength, 3, 3);
+xAxis.addClass('axis');
+viewport.addItem(xAxis, axisLength/-2 + 0, 0, -800);
+
+
+let yAxis = new Cuboid(3, axisLength, 3);
+yAxis.addClass('axis');
+viewport.addItem(yAxis, 0, axisLength/-2 + 0, -800);
+
+let zAxis = new Cuboid(3, 3, axisLength);
+zAxis.addClass('axis');
+viewport.addItem(zAxis, 0, 0, axisLength/2 + -800);
+*/
+
+
+
+
+for(let i = 0 ; i < 20 ; i++) {
+
+
+    let x = Math.floor(Math.random() * 2000);
+    let y = Math.floor(Math.random() * 2000);
+    let z = Math.floor(Math.random() * 2000);
+
+    if(Math.random() > 0.5) {
+        x = x * -1;
+    }
+    if(Math.random() > 0.5) {
+        y = y * -1;
+    }
+    if(Math.random() > 0.5) {
+        z = z * -1;
+    }
+
+
+
+    let cube = new Cube(100, 100);
+    cube.centerOrigin();
+    viewport.addItem(cube, x, y, z);
+    viewport.generate();
+    cube.draw();
+
+    let interval = Math.floor(Math.random() * 2000) + 1000;
+
+    setInterval(function() {
+
+        var x = Math.floor(Math.random() * 360);
+        var y = Math.floor(Math.random() * 360);
+        var z = Math.floor(Math.random() * 360);
+        
+        cube.rotate(x, y, z, interval);
+        cube.draw();
+
+    }, interval)
+}
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

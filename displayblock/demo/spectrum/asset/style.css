@@ -1,0 +1,60 @@
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding:0;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    background-color:#555;
+}
+
+
+audio {
+    position: fixed;
+    top: 150px;
+    left: 20px;
+    z-index:1000;
+}
+
+.cuboid .cuboid-side {
+    border: solid 1px #333;
+    transition: none;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    position: absolute;
+    backface-visibility: visible;
+}
+
+
+.cuboid .cuboid-side-top {
+
+}
+
+
+.cuboid .cuboid-side-top {
+    background-color: rgba(235,46,236,1);
+}
+
+.cuboid .cuboid-side-front, .cube .cube-side-left, .cube .cube-side-back {
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,246,9,1) 0%, rgba(255,243,36,1) 74%, rgba(235,46,236,1) 100%);
+}
+
+
+.cuboid .cuboid-side-right {
+    background: linear-gradient(-90deg, rgba(0,0,0,1) 0%, rgba(0,246,9,1) 0%, rgba(255,243,36,1) 74%, rgba(235,46,236,1) 100%);
+}
+
+
+.cuboid .cuboid-side-bottom {
+    box-shadow: 30px 30px 30px rgba(0,0,0, 0.7);
+}
+
+

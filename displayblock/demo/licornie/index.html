@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+
+<link rel="stylesheet" href="../../source/css/style.css" />
+<link rel="stylesheet" href="../../source/css/Board.css" />
+<link rel="stylesheet" href="../../source/css/Item.css" />
+<link rel="stylesheet" href="../../source/css/Cube.css" />
+<link rel="stylesheet" href="../../source/css/Cuboid.css" />
+<link rel="stylesheet" href="../../source/css/Player.css" />
+<link rel="stylesheet" href="../../source/css/theme/licornie/Cube.css" />
+
+
+<link rel="stylesheet" href="asset/style.css" />
+
+<title>Somewhere over the rainbow</title>
+
+</head>
+
+<body>
+
+<h1>Somewhere over the rainbow</h1>
+
+<script src="../../source/js/Viewport.js"></script>
+<script src="../../source/js/Board.js"></script>
+<script src="../../source/js/Board/Free.js"></script>
+<script src="../../source/js/Item.js"></script>
+
+
+<script src="../../source/js/Cuboid.js"></script>
+<script src="../../source/js/Cube.js"></script>
+
+
+<script src="../../source/js/Board/Square.js"></script>
+
+<script src="../../source/js/Game/Player.js"></script>
+<script src="../../source/js/Game/Game.js"></script>
+
+
+<script>
+
+let viewport = new Viewport(document.body);
+let square = new Square();
+
+viewport.setBoard(square);
+
+
+viewport.generate();
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

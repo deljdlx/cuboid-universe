@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+
+
+    
+<link rel="stylesheet" href="../../source/css/style.css" />
+<link rel="stylesheet" href="../../source/css/Board.css" />
+
+
+<link rel="stylesheet" href="../../source/css/Item.css" />
+<link rel="stylesheet" href="../../source/css/Cube.css" />
+
+<link rel="stylesheet" href="../../source/css/Cuboid.css" />
+
+
+
+
+
+<link rel="stylesheet" href="asset/style.css" />
+
+<title>Simple cube</title>
+
+</head>
+
+<body>
+
+<h1>Simple cube</h1>
+
+
+<script src="../../source/js/Viewport.js"></script>
+<script src="../../source/js/Board.js"></script>
+<script src="../../source/js/Board/Free.js"></script>
+<script src="../../source/js/Item.js"></script>
+<script src="../../source/js/Cuboid.js"></script>
+<script src="../../source/js/Cube.js"></script>
+
+<script>
+
+let viewport = new Viewport(document.body);
+
+
+let cube = new Cube(500, 500);
+
+viewport.addItem(cube, 0, 500, 100);
+
+viewport.generate();
+
+</script>
+
+
+
+
+
+</body>
+</html>

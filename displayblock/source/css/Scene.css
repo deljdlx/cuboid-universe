@@ -1,0 +1,30 @@
+
+.layout {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    
+
+
+    /*
+    transform-style: preserve-3d;
+    */
+}
+
+
+.perspective  {
+    position: absolute;
+    transform-style: preserve-3d;
+    /*background: radial-gradient(circle, rgba(251,64,206,0.2) 0%, rgba(101,9,102,0.2) 58%);*/
+    width:100vw;
+    height:100vh;
+
+    /*transition: transform 1000ms linear;*/
+}
+
+
+.scene {
+    /*background: radial-gradient(circle, rgba(251,64,206,0.2) 0%, rgba(101,9,102,0.2) 58%);   */
+}
+

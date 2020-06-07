@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+
+
+    
+<link rel="stylesheet" href="../../source/css/style.css" />
+<link rel="stylesheet" href="../../source/css/Board.css" />
+
+
+<link rel="stylesheet" href="../../source/css/Item.css" />
+
+
+<link rel="stylesheet" href="../../source/css/Cuboid.css" />
+<link rel="stylesheet" href="../../source/css/Cube.css" />
+
+
+
+
+
+
+
+<link rel="stylesheet" href="asset/style.css" />
+
+<title>Rotation</title>
+
+</head>
+
+<body>
+
+<h1>Rotation</h1>
+
+
+<script src="../../source/js/Viewport.js"></script>
+<script src="../../source/js/Board.js"></script>
+<script src="../../source/js/Board/Free.js"></script>
+<script src="../../source/js/Item.js"></script>
+<script src="../../source/js/Cuboid.js"></script>
+<script src="../../source/js/Cube.js"></script>
+
+<script>
+
+let viewport = new Viewport(document.body);
+
+
+let x = 0;
+let y = 0;
+let z = -800;
+
+
+let xAxis = new Cuboid(2000, 3, 3);
+xAxis.addClass('axis');
+viewport.addItem(xAxis, -1000 + x, y, z);
+
+
+let yAxis = new Cuboid(3, 2000, 3);
+yAxis.addClass('axis');
+viewport.addItem(yAxis, x, -1000 + y, z);
+
+let zAxis = new Cuboid(3, 3, 2000);
+zAxis.addClass('axis');
+viewport.addItem(zAxis, x, y, 1000 + z);
+
+
+
+let cube = new Cube(500, 500);
+cube.centerOrigin();
+viewport.addItem(cube, x, y, z);
+
+viewport.generate();
+
+let interval = 1000;
+
+setInterval(function() {
+
+
+    var x = Math.floor(Math.random() * 360);
+    var y = Math.floor(Math.random() * 360);
+    var z = Math.floor(Math.random() * 360);
+
+    //x = 0;
+    //y = 0;
+    //z = 0;
+    
+    cube.rotate(x, y, z, interval);
+    cube.draw();
+
+    console.log('draw');
+
+}, interval)
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

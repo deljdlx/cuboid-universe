@@ -1,0 +1,55 @@
+
+
+.player {
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 50px;
+    height: 50px;
+    
+}
+
+
+.player:hover .player-side {
+    filter: grayscale(0);
+}
+
+.player:hover .player-side-avatar {
+    filter: brightness(1);
+    width: 150%;
+    height: 150%;
+}
+
+
+.player .player-side {
+    transform-origin: 0 0;
+    background-size: contain;
+}
+
+.cube.player .cube-side-top {
+    background-color:#FFA;
+}
+
+.cube.player .cube-side-right {
+    background-color:#F0F;
+}
+
+.cube.player .cube-side-front {
+    background-color:#FAF;
+}
+
+.cube.player .cube-side-bottom {
+    box-shadow: 10px 10px 10px rgba(0,0,0, 0.7);
+}
+
+.player .player-side-avatar {
+    border-radius: 40% 40% 30% 30%;
+    transform-origin: 50% 50%;
+    width: 120%;
+    height: 120%;
+    top: 0;
+    left:0;
+    background-color:#AAA;
+    filter: brightness(0.9);
+    transition: all;
+}
+
