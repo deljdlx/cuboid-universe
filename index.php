@@ -102,7 +102,17 @@ for($i = 0; $i < 45 ; $i++) {
 <script src="./displayblock/source/js/Cube.js"></script>
 
 <script>
+<?php
+$number = 10;
+if(isset($_GET['number'])) {
+    $number = $_GET['number'];
+}
 
+$maxAngle = 20;
+if(isset($_GET['maxAngle'])) {
+    $maxAngle = $_GET['maxAngle'];
+}
+?>
 
 function rotateBoard(board, interval, x0, y0, z0, x1, y1, z1) {
     setTimeout(function() {
@@ -113,6 +123,12 @@ function rotateBoard(board, interval, x0, y0, z0, x1, y1, z1) {
     },0);
 }
 
+
+
+let boards = {}
+let maxParticules = <?=$number;?>;
+let maxAngle = <?=$maxAngle;?>;
+let cubes = [];
 
 
 let viewport = new Viewport(document.body);
@@ -148,13 +164,20 @@ viewport.addItem(cube, x, y, z);
 
 //=================================================================
 
-let boards = {}
-let maxParticules = 10;
-let cubes = [];
+
+
 for(let i = 0 ; i < maxParticules ; i++) {
 
-    let size = 30 + Math.trunc(Math.random() * 50);
-    let angle0 = Math.trunc(Math.random() * 20);
+    let size = 10;
+    if(maxParticules>10) {
+        console.log('ici');
+        size = 30 + Math.trunc(Math.random() * 30);
+    }
+    else {
+        size = 30 + Math.trunc(Math.random() * 50);
+    }
+    
+    let angle0 = Math.trunc(Math.random() * maxAngle);
 
     if(Math.random()>0.5) {
         angle0 *= -1;
@@ -198,7 +221,17 @@ for(let i = 0 ; i < maxParticules ; i++) {
 
 viewport.generate();
 
+
 viewport.setRotation(0, 0, 0);
+
+
+if(maxParticules>10) {
+    viewport.setRotation(45, 0, 45);
+    viewport.scale = 0.6;
+    viewport.disableZoom = true;
+    viewport.applyTransformations();
+}
+
 
 
 for(let i = 0 ; i < maxParticules ; i++) {

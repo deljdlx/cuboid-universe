@@ -32,6 +32,7 @@ class Viewport
 
     scale = 1;
     saleIncrement = 0.15;
+    disableZoom = false;
 
     transformOrigin = '50% 50% 0';
 
@@ -166,6 +167,9 @@ class Viewport
     
 
     handleWheel(evt) {
+        if(this.disableZoom) {
+            return false;
+        }
         //evt.preventDefault();
 
         let delta = evt.deltaY;
