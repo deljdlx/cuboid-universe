@@ -30,8 +30,6 @@ body {
     border-radius: 100%;
 }
 
-
-
 .the-boss .cuboid-side {
     background-image: url(fantasy/the-boss.jpg);
     background-size: cover;
