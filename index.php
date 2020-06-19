@@ -1,25 +1,15 @@
 <!doctype html>
 <html>
 <head>
-
-
     
 <link rel="stylesheet" href="./displayblock/source/css/style.css" />
 <link rel="stylesheet" href="./displayblock/source/css/Scene.css" />
 <link rel="stylesheet" href="./displayblock/source/css/Board.css" />
 
-
 <link rel="stylesheet" href="./displayblock/source/css/Item.css" />
-
 
 <link rel="stylesheet" href="./displayblock/source/css/Cuboid.css" />
 <link rel="stylesheet" href="./displayblock/source/css/Cube.css" />
-
-
-
-
-
-
 
 <link rel="stylesheet" href="asset/style.css" />
 
